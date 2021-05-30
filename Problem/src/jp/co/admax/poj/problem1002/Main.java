@@ -9,6 +9,7 @@ package jp.co.admax.poj.problem1002;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 /**
  * Problem No.1002
@@ -23,25 +24,25 @@ public class Main {
 	private static List<String>getInput() {
 		List<String> inp = new ArrayList<String>();
 		
-//		Scanner cin = new Scanner(System.in);
-//		while (cin.hasNext()) {
-//			inp.add(cin.nextLine());
-//		}
-//		cin.close();
+		Scanner cin = new Scanner(System.in);
+		while (cin.hasNext()) {
+			inp.add(cin.nextLine());
+		}
+		cin.close();
 		
-		inp.add("12");
-		inp.add("4873279");
-		inp.add("ITS-EASY");
-		inp.add("888-4567");
-		inp.add("3-10-10-10");
-		inp.add("888-GLOP");
-		inp.add("TUT-GLOP");
-		inp.add("967-11-11");
-		inp.add("310-GINO");
-		inp.add("F101010");
-		inp.add("888-1200");
-		inp.add("-4-8-7-3-2-7-9-");
-		inp.add("487-3279");
+//		inp.add("12");
+//		inp.add("4873279");
+//		inp.add("ITS-EASY");
+//		inp.add("888-4567");
+//		inp.add("3-10-10-10");
+//		inp.add("888-GLOP");
+//		inp.add("TUT-GLOP");
+//		inp.add("967-11-11");
+//		inp.add("310-GINO");
+//		inp.add("F101010");
+//		inp.add("888-1200");
+//		inp.add("-4-8-7-3-2-7-9-");
+//		inp.add("487-3279");
 		
 		return inp;
 	}
@@ -114,10 +115,10 @@ public class Main {
 	}
 
 	static private DoublyList insertTelephone(DoublyList head, String val) {
-		System.out.println("["+val+"]");
+		//System.out.println("["+val+"]");
 		DoublyList ptr = head;
 		while (ptr != null) {
-			System.out.println(ptr.value+"("+ptr.count+")");
+			//System.out.println(ptr.value+"("+ptr.count+")");
 			int cmp = val.compareTo(ptr.value);
 			if (cmp == 0) {
 				//System.out.println("INCREMENT");
@@ -126,7 +127,7 @@ public class Main {
 				break;
 			}
 			else if (cmp < 0) {
-				System.out.println("INSERT RIGHT");
+				//System.out.println("INSERT RIGHT");
 				// 着目ノードより小さい場合は、右側に挿入
 				DoublyList tmp = new DoublyList(val);
 				tmp.next = ptr;
@@ -145,7 +146,7 @@ public class Main {
 				ptr = ptr.next;
 			}
 			else {
-				System.out.println("INSERT LEFT");
+				//System.out.println("INSERT LEFT");
 				// 着目ノードが左端の場合は、左側に挿入
 				DoublyList tmp = new DoublyList(val);
 				tmp.next = ptr.next;
@@ -156,7 +157,7 @@ public class Main {
 		}
 		if (head == null) {
 			head = new DoublyList(val);
-			System.out.println(head.value+"<"+head.count+">");
+			//System.out.println(head.value+"<"+head.count+">");
 		}
 		
 		return head;
