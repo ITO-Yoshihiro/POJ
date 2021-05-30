@@ -20,52 +20,6 @@ import java.util.List;
 public class Main {
 	static String numb = "000011112ABC3DEF4GHI5JKL6MNO7PRS8TUV9WXY";
 
-//	/**
-//	 * 
-//	 * @param args
-//	 * @throws Exception
-//	 */
-//	public static void main(String[] args) throws Exception {
-////		Map<String,Integer> tel = new HashMap<String,Integer>();
-//		List<String> inp = getInput();
-//		DoublyList head = null;
-//
-//		int count = Integer.parseInt(inp.get(0));
-//		for (int i=0, k=1; i<count; i++, k++) {
-//			String tel = getTelephone(inp.get(k));
-//			head = insertTelephone(head, tel);
-//			printList(head);
-//			
-////			if (tel.containsKey(key)) {
-////				int n = tel.get(key);
-////				tel.remove(key);
-////				tel.put(key, ++n);
-////			}
-////			else {
-////				tel.put(key, 1);
-////			}
-//		}
-//
-//		printResult(head);
-//		
-////		boolean isDuplicate = false;
-////		Object[] mapKey = tel.keySet().toArray();
-////		Arrays.sort(mapKey);
-////
-////		for (int i=0; i<mapKey.length; i++) {
-////			String key = mapKey[i].toString();
-////			int n = tel.get(key);
-////			if (n > 1) {
-////				isDuplicate = true;
-////				System.out.println(key + " " + n);
-////			}
-////		}
-////		
-////		if (!isDuplicate) {
-////			System.out.println("No duplicates.");
-////		}
-//	}
-	
 	private static List<String>getInput() {
 		List<String> inp = new ArrayList<String>();
 		
@@ -92,12 +46,6 @@ public class Main {
 		return inp;
 	}
 	
-//	private static void printList(List<String> list) {
-//		for (int i=0; i<list.size(); i++) {
-//			System.out.println(list.get(i));
-//		}
-//	}
-
 	public static class DoublyList {
 		DoublyList next;
 		DoublyList prev;
@@ -120,25 +68,8 @@ public class Main {
 		List<String> inp = getInput();
 		DoublyList head = null;
 
-//	for (int i=0, k=1; i<count; i++, k++) {
-//		String tel = getTelephone(inp.get(k));
-//		head = insertTelephone(head, tel);
-//		printList(head);
-//		
-////		if (tel.containsKey(key)) {
-////			int n = tel.get(key);
-////			tel.remove(key);
-////			tel.put(key, ++n);
-////		}
-////		else {
-////			tel.put(key, 1);
-////		}
-//	}
 		
 		try {
-//			Scanner cin = new Scanner(System.in);
-//			String inp = cin.nextLine();
-//			count = Integer.parseInt(inp);
 
 			int count = Integer.parseInt(inp.get(0));
 			for (int i=0; i<count; i++) {
@@ -149,7 +80,7 @@ public class Main {
 			
 			printResult(head);
 
-			System.out.println("finished.");			
+			//System.out.println("finished.");			
 		}
 		catch (Exception e) {
 			System.out.println(e);
